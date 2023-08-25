@@ -1,0 +1,12 @@
+body {}
+
+/*User Define Class*/
+.primary-background {
+	background: #ea4343 !important;
+}
+.banner-background-clipping {
+	clip-path: polygon(33% 0, 67% 0, 100% 0, 100% 93%, 67% 100%, 33% 93%, 0 100%, 0 0);
+}
+/*.button-color{
+	color: black;
+}*/
