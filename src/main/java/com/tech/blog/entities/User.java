@@ -10,6 +10,7 @@ public class User {
 	private String gender;
 	private String about;
 	private Timestamp dateTime;
+	private String profile;
 
 	public User(int id, String name, String email, String password, String gender, String about, Timestamp dateTime) {
 		super();
@@ -90,4 +91,12 @@ public class User {
 		this.dateTime = dateTime;
 	}
 
+	public String getProfile() {
+		return profile;
+	}
+
+	public void setProfile(String profile) {
+		this.profile = profile;
+	}
+	
 }

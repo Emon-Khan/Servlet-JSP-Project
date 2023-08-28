@@ -21,7 +21,9 @@
 	<!-- navbar -->
 	<%@include file="navbar.jsp"%>
 	<!-- loginForm -->
-	<main class="d-flex align-items-center primary-background banner-background-clipping" style="height: 90vh;">
+	<main
+		class="d-flex align-items-center primary-background banner-background-clipping"
+		style="height: 90vh;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 offset-md-4">
@@ -30,27 +32,24 @@
 							<h1>Login Here</h1>
 						</div>
 						<div class="card-body">
-							<form>
+							<form action="LoginServlet" method="post">
 								<div class="mb-3">
 									<label for="exampleInputEmail1" class="form-label">Email
-										address</label> <input type="email" class="form-control"
-										id="exampleInputEmail1" aria-describedby="emailHelp">
+										address</label> <input name="email" required type="email"
+										class="form-control" id="exampleInputEmail1"
+										aria-describedby="emailHelp">
 									<div id="emailHelp" class="form-text">We'll never share
 										your email with anyone else.</div>
 								</div>
 								<div class="mb-3">
 									<label for="exampleInputPassword1" class="form-label">Password</label>
-									<input type="password" class="form-control"
-										id="exampleInputPassword1">
-								</div>
-								<div class="mb-3 form-check">
-									<input type="checkbox" class="form-check-input"
-										id="exampleCheck1"> <label class="form-check-label"
-										for="exampleCheck1">Check me out</label>
+									<input name="password" required type="password"
+										class="form-control" id="exampleInputPassword1">
 								</div>
 								<button type="submit" class="btn btn-danger">Submit</button>
 								<hr>
-								<a href="register_page.jsp" class="btn btn-success">Create New Account</a>
+								<a href="register_page.jsp" class="btn btn-success">Create
+									New Account</a>
 							</form>
 						</div>
 					</div>

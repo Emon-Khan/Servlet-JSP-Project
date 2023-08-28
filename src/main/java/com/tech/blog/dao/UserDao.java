@@ -28,4 +28,29 @@ public class UserDao {
 		}
 		return flag;
 	}
+
+	public User getUserByEmailAndPassword(String email, String password) {
+		User user = null;
+		try {
+			String query = "select * from user where email=? and password=?";
+			PreparedStatement pstmt = con.prepareStatement(query);
+			pstmt.setString(1, email);
+			pstmt.setString(2, password);
+			ResultSet set = pstmt.executeQuery();
+			if (set.next()) {
+				user = new User();
+				user.setId(set.getInt("id"));
+				user.setName(set.getString("name"));
+				user.setEmail(set.getString("email"));
+				user.setPassword(set.getString("password"));
+				user.setGender(set.getString("gender"));
+				user.setAbout(set.getString("about"));
+				user.setDateTime(set.getTimestamp("rDate"));
+				user.setProfile(set.getString("profile"));
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return user;
+	}
 }
