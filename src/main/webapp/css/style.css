@@ -4,9 +4,17 @@ body {}
 .primary-background {
 	background: #ea4343 !important;
 }
+
 .banner-background-clipping {
 	clip-path: polygon(33% 0, 67% 0, 100% 0, 100% 93%, 67% 100%, 33% 93%, 0 100%, 0 0);
 }
+
 /*.button-color{
 	color: black;
 }*/
+.profile-pic {
+	min-height: 50px !important;
+	max-height: 150px !important;
+	min-width: 50px !important;
+	max-width: 150px !important;
+}
